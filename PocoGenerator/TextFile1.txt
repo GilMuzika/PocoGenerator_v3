@@ -1,0 +1,5 @@
+﻿List<string> GetAllDataBases();
+List<string> GetAllDataBases2(sring instanceName);
+Dictionary<string, string> GetColumnNamesInATable(string tableName);
+void SetConnectionString(string dataBaseName);
+List<string> GetAllTableNames();

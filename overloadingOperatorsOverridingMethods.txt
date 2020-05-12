@@ -1,0 +1,25 @@
+
+
+        public static bool operator ==(TYPE_NAME c1, TYPE_NAME c2)
+        {
+            if (ReferenceEquals(c1, null) && ReferenceEquals(c2, null)) return true;
+
+            if (ReferenceEquals(c1, null) || ReferenceEquals(c2, null)) return false;
+
+            return c1.FIRST_COLUMN_NAME == c2.FIRST_COLUMN_NAME;
+        }
+
+        public static bool operator !=(TYPE_NAME c1, TYPE_NAME c2)
+        {
+            return !(c1 == c2);
+        }
+        public override bool Equals(object obj)
+        {
+            var thisType = obj as TYPE_NAME;
+            return this == thisType;
+        }
+        public override int GetHashCode()
+        {
+            return Convert.ToInt32(this.FIRST_COLUMN_NAME);
+        }
+
