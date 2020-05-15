@@ -426,7 +426,7 @@ namespace PocoGenerator
             typeValueCorrelation.Add(typeof(DateTime).Name, "DateTime.MinValue;");
             typeValueCorrelation.Add(typeof(Byte[]).Name, "new Byte[] { 0x20 };");
             typeValueCorrelation.Add(typeof(Byte).Name, new Byte().ToString()+";");
-            typeValueCorrelation.Add(typeof(Guid).Name, new Guid().ToString()+";");
+            typeValueCorrelation.Add(typeof(Guid).Name, "Guid.Parse(\"" + new Guid().ToString()+"\");");
             typeValueCorrelation.Add(typeof(Object).Name, new Object().ToString()+";");
             typeValueCorrelation.Add(typeof(DateTimeOffset).Name, new DateTimeOffset().ToString()+";");
             return typeValueCorrelation;
