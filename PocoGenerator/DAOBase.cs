@@ -47,7 +47,7 @@ namespace PocoGenerator
             foreach (DataRow row in table.AsEnumerable())
             {
                 if (!(row["ServerName"] is DBNull)) servername = (string)row["ServerName"];
-                if (!(row["InstanceName"] is DBNull)) servername = "\\" + (string)row["InstanceName"];
+                if (!(row["InstanceName"] is DBNull)) instancename = "\\" + (string)row["InstanceName"];
             }
             serverName = servername;
             instanceName = instancename;
